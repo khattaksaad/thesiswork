@@ -1,0 +1,71 @@
+Using config: {'_model_dir': 'results/model', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 120, '_session_config': None, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_device_fn': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f8c2b0ecb70>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+Running training and evaluation locally (non-distributed).
+Start train and evaluate loop. The evaluate will happen after every checkpoint. Checkpoint frequency is determined based on RunConfig arguments: save_checkpoints_steps None or save_checkpoints_secs 120.
+Calling model_fn.
+Done calling model_fn.
+Create CheckpointSaverHook.
+Graph was finalized.
+Running local_init_op.
+Done running local_init_op.
+Saving checkpoints for 0 into results/model/model.ckpt.
+loss = 45.434067, step = 1
+global_step/sec: 7.90594
+loss = 8.705399, step = 101 (12.649 sec)
+global_step/sec: 8.76617
+loss = 5.5877113, step = 201 (11.407 sec)
+global_step/sec: 8.35203
+loss = 3.5362065, step = 301 (11.973 sec)
+global_step/sec: 7.23119
+loss = 4.5701804, step = 401 (13.829 sec)
+global_step/sec: 4.13062
+loss = 4.103639, step = 501 (24.210 sec)
+global_step/sec: 5.85739
+loss = 4.4006853, step = 601 (17.082 sec)
+global_step/sec: 8.37799
+loss = 3.8120465, step = 701 (11.926 sec)
+global_step/sec: 8.74143
+loss = 4.2137475, step = 801 (11.455 sec)
+Saving checkpoints for 837 into results/model/model.ckpt.
+Calling model_fn.
+Done calling model_fn.
+Starting evaluation at 2018-10-25-09:13:48
+Graph was finalized.
+Restoring parameters from results/model/model.ckpt-837
+Running local_init_op.
+Done running local_init_op.
+Evaluation [10/100]
+Finished evaluation at 2018-10-25-09:13:50
+Saving dict for global step 837: acc = 0.9244348, f1 = 0.045454547, global_step = 837, loss = 6.037756, precision = 0.27272728, recall = 0.024793388
+Saving 'checkpoint_path' summary for global step 837: results/model/model.ckpt-837
+Saving checkpoints for 874 into results/model/model.ckpt.
+Skip the current checkpoint eval due to throttle secs (120 secs).
+Calling model_fn.
+Done calling model_fn.
+Starting evaluation at 2018-10-25-09:13:57
+Graph was finalized.
+Restoring parameters from results/model/model.ckpt-874
+Running local_init_op.
+Done running local_init_op.
+Evaluation [10/100]
+Finished evaluation at 2018-10-25-09:13:59
+Saving dict for global step 874: acc = 0.9253639, f1 = 0.038910504, global_step = 874, loss = 6.167658, precision = 0.33333334, recall = 0.020661157
+Saving 'checkpoint_path' summary for global step 874: results/model/model.ckpt-874
+Loss for final step: 4.7548.
+Calling model_fn.
+Done calling model_fn.
+Graph was finalized.
+Restoring parameters from results/model/model.ckpt-874
+Running local_init_op.
+Done running local_init_op.
+Calling model_fn.
+Done calling model_fn.
+Graph was finalized.
+Restoring parameters from results/model/model.ckpt-874
+Running local_init_op.
+Done running local_init_op.
+Calling model_fn.
+Done calling model_fn.
+Graph was finalized.
+Restoring parameters from results/model/model.ckpt-874
+Running local_init_op.
+Done running local_init_op.

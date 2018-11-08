@@ -1,0 +1,31 @@
+Using config: {'_model_dir': 'results/model', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 120, '_session_config': None, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_device_fn': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f762fe330f0>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+Running training and evaluation locally (non-distributed).
+Start train and evaluate loop. The evaluate will happen after every checkpoint. Checkpoint frequency is determined based on RunConfig arguments: save_checkpoints_steps None or save_checkpoints_secs 120.
+Calling model_fn.
+Done calling model_fn.
+Create CheckpointSaverHook.
+Graph was finalized.
+Running local_init_op.
+Done running local_init_op.
+Saving checkpoints for 0 into results/model/model.ckpt.
+loss = 21.789427, step = 1
+global_step/sec: 1.7838
+loss = 1.5219852, step = 101 (56.060 sec)
+global_step/sec: 1.85073
+loss = 1.4618641, step = 201 (54.033 sec)
+Saving checkpoints for 213 into results/model/model.ckpt.
+Calling model_fn.
+Done calling model_fn.
+Starting evaluation at 2018-11-08-11:52:43
+Graph was finalized.
+Restoring parameters from results/model/model.ckpt-213
+Running local_init_op.
+Done running local_init_op.
+Evaluation [10/100]
+Evaluation [20/100]
+Evaluation [30/100]
+Evaluation [40/100]
+Evaluation [50/100]
+Finished evaluation at 2018-11-08-11:52:53
+Saving dict for global step 213: acc = 0.9639313, f1 = 0.4115822, global_step = 213, loss = 1.9169471, precision = 0.88053095, recall = 0.268556
+Saving 'checkpoint_path' summary for global step 213: results/model/model.ckpt-213
