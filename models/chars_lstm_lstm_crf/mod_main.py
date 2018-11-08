@@ -29,6 +29,8 @@ def parse_fn(line_words, line_tags, line_addFeats): #
     words = [w.encode() for w in line_words.strip().split()]
     tags = [t.encode() for t in line_tags.strip().split()]
     #print(words)
+    if(len(words) != len(tags)):
+          print(words)
     assert len(words) == len(tags), "Words and tags lengths don't match"
     
     # Chars
@@ -245,8 +247,9 @@ if __name__ == '__main__':
             test_inpf = functools.partial(input_fn, fwords(name), ftags(name),faddfeats(name))
             golds_gen = generator_fn(fwords(name), ftags(name),faddfeats(name))
             preds_gen = estimator.predict(test_inpf)
+
             for golds, preds in zip(golds_gen, preds_gen):
-                ((words, _), (_, _)), tags = golds
+                ((words, _), (_, _),(_)), tags = golds
                 for word, tag, tag_pred in zip(words, tags, preds['tags']):
                     f.write(b' '.join([word, tag, tag_pred]) + b'\n')
                 f.write(b'\n')
